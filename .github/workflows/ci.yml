@@ -15,11 +15,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, ubuntu-24.04, windows-latest]
+        os: [ubuntu-latest, ubuntu-24.04, ubuntu-20.04, windows-latest]
         include:
           - os: ubuntu-latest
             preset: linux-release
           - os: ubuntu-24.04
+            preset: linux-release
+          - os: ubuntu-20.04
             preset: linux-release
           - os: windows-latest
             preset: windows-release
@@ -31,7 +33,7 @@ jobs:
       - name: Set up vcpkg
         uses: lukka/run-vcpkg@v11
         with:
-          vcpkgGitCommitId: "a42af01b72c28a8e1d7b48107b33e4f286a55ef6"
+          vcpkgGitCommitId: "b472291f295551b7127359ea38fdd2ca092f6f1b"
 
       - name: Configure & Build with CMake
         uses: lukka/run-cmake@v10
