@@ -1,0 +1,8 @@
+{
+  "name": "ci-test",
+  "version": "1.0.0",
+  "builtin-baseline": "b472291f295551b7127359ea38fdd2ca092f6f1b",
+  "dependencies": [
+    "fmt"
+  ]
+}
